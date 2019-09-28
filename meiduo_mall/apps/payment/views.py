@@ -36,7 +36,7 @@ class PaymentURLView(LoginRequiredView):
         alipay = AliPay(
             appid=settings.ALIPAY_APPID,
             app_notify_url=None,  # 默认回调url
-            # /Users/chao/Desktop/meiduo_30/meiduo_mall/meiduo_mall/apps/payment/views.py
+            # /Users/chao/Desktop/meiduo_30/meiduo_mall/meiduo_mall/apps/payment/login_view.py
             # /Users/chao/Desktop/meiduo_30/meiduo_mall/meiduo_mall/apps/payment/keys/app_private_key.pem
             app_private_key_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'keys/app_private_key.pem'),
             # 支付宝的公钥，验证支付宝回传消息使用，不是你自己的公钥,

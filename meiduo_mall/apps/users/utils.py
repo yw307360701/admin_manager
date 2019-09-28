@@ -26,12 +26,35 @@ def get_user_by_account(account):
 class UsernameMobileAuthBackend(ModelBackend):
     """自定义认证后端实现多账号登录"""
     def authenticate(self, request, username=None, password=None, **kwargs):
-        # 1.根据用户名或手机号 查询user
-        user = get_user_by_account(username)
-        # 2.校验用户密码
-        if user and user.check_password(password) and user.is_active:
-            # 返回user or None
+        # # 1.根据用户名或手机号 查询user
+        # user = get_user_by_account(username)
+        # # 2.校验用户密码
+        # if user and user.check_password(password) and user.is_active:
+        #     # 返回user or None
+        #     return user
+        try:
+
+            user = User.objects.get(username=username)
+        except:
+            # 如果未查到数据，则返回None，用于后续判断
+            try:
+                user = User.objects.get(mobile=username)
+            except:
+                return None
+
+            # 如果该请求是来自后台管理站点的登陆请求
+            # 那么就需要验证用户是否是超级管理员
+            # 关键问题：根据request对象是否为空，来判断此次登陆请求是否是后台站点登陆
+        if request is None:
+            # 后台站点登陆
+            if not user.is_staff:
+                return None
+
+            # 判断密码
+        if user.check_password(password):
             return user
+        else:
+            return None
 
 
 def generate_verify_email_url(user):

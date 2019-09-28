@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os, sys
+import datetime
+from datetime import timedelta
 
 # print(sys.path)
 # ['/home/python/Desktop/meiduo_project/meiduo_mall',
@@ -55,6 +57,7 @@ INSTALLED_APPS = [
     'haystack',  # 全文检索
     'django_crontab',  # 定时任务
     'rest_framework',
+    'corsheaders',
 
     'users.apps.UsersConfig',  # 用户模块
     'oauth.apps.OauthConfig',  # QQ模块
@@ -67,10 +70,13 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # 作用：对所有对请求做检查，检查是否是OPTIONS请求，以及是否请求的源是被允许的
+    'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -157,7 +163,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = False
+USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -313,3 +319,29 @@ DATABASE_ROUTERS = ['meiduo_mall.utils.db_router.MasterSlaveDBRouter']
 
 # 静态文件收集目录
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
+
+# 跨域白名单
+CORS_ORIGIN_WHITELIST = (
+    'http://127.0.0.1:8080',
+    # 'http://localhost:8080',
+    'http://www.meiduo.site:8080',
+    # 'http://api.meiduo.site:8000'
+)
+CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
+JWT_AUTH = {
+    # 设置签发的token的有效期
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=100),
+    # 指明jwt的obtain_jwt_token视图构建最终响应数据的函数
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'meiduo_mall.utils.custom_jwt_response_handler.jwt_response_payload_handler',
+}

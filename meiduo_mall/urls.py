@@ -38,4 +38,6 @@ urlpatterns = [
     url(r'^search/', include('haystack.urls')), # 搜索模块
 
     url(r'^', include('payment.urls', namespace='payment')),  # 支付模块
+
+    url('^meiduo_admin/', include('meiduo_admin.urls')),
 ]
