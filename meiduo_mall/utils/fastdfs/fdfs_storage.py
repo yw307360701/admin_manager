@@ -1,6 +1,7 @@
 from django.core.files.storage import Storage
 from django.conf import settings
-
+from fdfs_client.client import Fdfs_client
+from rest_framework.serializers import ValidationError
 
 class FastDFSStorage(Storage):
     """自定义文件存储类"""
@@ -12,7 +13,7 @@ class FastDFSStorage(Storage):
         :param mode: 打开文件模式 二进制读取
         :return: 打开的文件对象
         """
-        pass
+        return None
 
     def _save(self, name, content):
         """
@@ -21,7 +22,21 @@ class FastDFSStorage(Storage):
         :param content: 被读取出来的文件二进制数据
         :return: file_id
         """
-        pass
+        conn = Fdfs_client(settings.FDFS_CONF_PATH)
+        res = conn.upload_by_buffer(content.read())
+        if res['Status'] != 'Upload successed.':
+            raise ValidationError('文件上传fdfs失败')
+        return res['Remote file_id']
+        # return dict
+        # {
+        #     'Group name': group_name,
+        #     'Remote file_id': remote_file_id,
+        #     'Status': 'Upload successed.',
+        #     'Local file name': '',
+        #     'Uploaded size': upload_size,
+        #     'Storage IP': storage_ip
+        # }
+
 
 
     def url(self, name):
@@ -32,3 +47,7 @@ class FastDFSStorage(Storage):
         """
         # return 'http://192.168.233.131:8888/' + name
         return settings.FDFS_BASE_URL + name
+
+    def exists(self, name):
+
+        return False

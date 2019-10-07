@@ -280,6 +280,9 @@ EMAIL_VERIFY_URL = 'http://www.meiduo.site:8000/emails/verification/'
 
 # 指定远程图片下载位置
 # MEDIA_URL = 'http://192.168.233.131:8888/'
+# fdfs的访问域名
+# FDFS_URL = 'http://image.meiduo.site:8888/'
+FDFS_URL = 'http://192.168.233.131:8888/'
 
 # 指定自定义文件存储类
 DEFAULT_FILE_STORAGE = 'meiduo_mall.utils.fastdfs.fdfs_storage.FastDFSStorage'
@@ -345,3 +348,5 @@ JWT_AUTH = {
     # 指明jwt的obtain_jwt_token视图构建最终响应数据的函数
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'meiduo_mall.utils.custom_jwt_response_handler.jwt_response_payload_handler',
 }
+
+FDFS_CONF_PATH = os.path.join(BASE_DIR, 'utils/client.conf')

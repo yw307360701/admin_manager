@@ -3,6 +3,9 @@ from meiduo_admin.serializers.sku_serializer import *
 from goods.models import SKU, GoodsCategory
 from meiduo_admin.pages import MyPage
 from rest_framework.response import Response
+from rest_framework.generics import ListAPIView
+from meiduo_admin.serializers.spussimple_serializer import SpuSimpleSerializer
+from goods.models import SPU
 
 
 class SKUViewSet(ModelViewSet):
@@ -37,3 +40,21 @@ class SKUViewSet(ModelViewSet):
         s = self.get_serializer(category_3_queryset, many=True)
         # 3、序列化返回
         return Response(s.data)
+
+
+class SpuSimpleView(ListAPIView):
+    serializer_class = SpuSimpleSerializer
+    queryset = SPU.objects.all()
+
+
+
+class SPUSpecSimpleVIew(ListAPIView):
+    queryset = SPUSpecification.objects.all()
+    serializer_class = SPUSpesSerializer
+
+    def get_queryset(self):
+        # 如何在非视图函数中，提取参数pk
+        #/goods/(?/P<pk>\w+)/specs/ --self.kwargs.get('k')
+        #/goods/(\w+)/(\d+)/specs/ --self.args[0]
+        spu_id = self.kwargs.get('pk')
+        return self.queryset.filter(spu_id=spu_id)
