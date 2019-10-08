@@ -9,6 +9,9 @@ from meiduo_admin.views.spu_view import *
 from meiduo_admin.views.spec_view import *
 from meiduo_admin.views.option_view import *
 from meiduo_admin.views.image_view import *
+from meiduo_admin.views.order_view import *
+from meiduo_admin.views.perm_view import *
+from meiduo_admin.views.group_view import *
 
 urlpatterns = [
     # url(r'^authorizations/$',LoginAPIView.as_view()),
@@ -37,6 +40,27 @@ urlpatterns = [
     url(r'goods/specs/simple/$', SpecSimpleView.as_view()),
     # 新增图片可选sku
     url(r'skus/simple/$', ImageViewSet.as_view({"get": "simple"})),
+
+    # 订单
+    url(r'orders/$', OrderInfoView.as_view()),
+    url(r'orders/(?P<pk>\d+)/$', OrderInfoView.as_view()),
+    url(r'orders/(?P<pk>\d+)/status/$', OrderInfoView.as_view()),
+
+    # 权限管理
+    url(r'permission/perms/$', PermViewSet.as_view({"get":"list", "post":'create'})),
+    url(r'permission/perms/(?P<pk>\d+)/$', PermViewSet.as_view({"get":"retrieve",
+                                                                "delete":"destroy",
+                                                         "put":"update"})),
+    # 新增权限可选类型
+    url(r'permission/content_types/$', ContentTypeView.as_view()),
+
+    # 分组管理
+    url(r'permission/groups/$', GroupViewSet.as_view({"get": "list", 'post': "create"})),
+    url(r'permission/groups/(?P<pk>\d+)/$', GroupViewSet.as_view({"get": "retrieve",
+                                                                  "put": "update",
+                                                                  "delete": "destroy"})),
+    # 新增分组可选权限
+    url(r'permission/simple/$', GroupPermView.as_view()),
 
 ]
 

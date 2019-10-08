@@ -28497,3 +28497,488 @@ INFO 2019-10-07 19:26:28,446 basehttp 124 "GET /meiduo_admin/skus/categories/ HT
 INFO 2019-10-07 19:26:28,452 basehttp 124 "GET /meiduo_admin/skus/?page=1&pagesize=10&keyword= HTTP/1.1" 200 6674
 WARNING 2019-10-07 19:26:31,551 base 152 Not Found: /meiduo_admin/orders/
 WARNING 2019-10-07 19:26:31,551 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 404 13496
+INFO 2019-10-07 19:50:45,874 basehttp 124 "OPTIONS /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2019-10-07 19:50:46,513 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:50:50,225 basehttp 124 "OPTIONS /meiduo_admin/orders/?page=2&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2019-10-07 19:50:50,248 basehttp 124 "GET /meiduo_admin/orders/?page=2&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:50:52,172 basehttp 124 "OPTIONS /meiduo_admin/orders/?page=3&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2019-10-07 19:50:52,212 basehttp 124 "GET /meiduo_admin/orders/?page=3&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:50:53,426 basehttp 124 "OPTIONS /meiduo_admin/orders/?page=4&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2019-10-07 19:50:53,456 basehttp 124 "GET /meiduo_admin/orders/?page=4&pagesize=10&keyword= HTTP/1.1" 200 385
+INFO 2019-10-07 19:50:55,156 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:50:55,897 basehttp 124 "OPTIONS /meiduo_admin/orders/20190917185244000000012/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:50:55,968 basehttp 124 "GET /meiduo_admin/orders/20190917185244000000012/ HTTP/1.1" 200 259
+INFO 2019-10-07 19:50:58,886 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:50:59,733 basehttp 124 "OPTIONS /meiduo_admin/orders/20190917192032000000012/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:50:59,771 basehttp 124 "GET /meiduo_admin/orders/20190917192032000000012/ HTTP/1.1" 200 259
+INFO 2019-10-07 19:51:01,364 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:51:02,619 basehttp 124 "OPTIONS /meiduo_admin/orders/20190917203029000000012/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:51:02,669 basehttp 124 "GET /meiduo_admin/orders/20190917203029000000012/ HTTP/1.1" 200 476
+INFO 2019-10-07 19:51:05,492 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:51:06,719 basehttp 124 "OPTIONS /meiduo_admin/orders/20190917203718000000012/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:51:06,757 basehttp 124 "GET /meiduo_admin/orders/20190917203718000000012/ HTTP/1.1" 200 260
+INFO 2019-10-07 19:51:08,107 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:51:09,503 basehttp 124 "GET /meiduo_admin/orders/?page=2&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:51:10,238 basehttp 124 "GET /meiduo_admin/orders/?page=3&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:51:11,275 basehttp 124 "GET /meiduo_admin/orders/?page=4&pagesize=10&keyword= HTTP/1.1" 200 385
+INFO 2019-10-07 19:51:14,373 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:51:24,086 basehttp 124 "GET /meiduo_admin/orders/20190917203718000000012/ HTTP/1.1" 200 260
+INFO 2019-10-07 19:51:29,193 basehttp 124 "OPTIONS /meiduo_admin/orders/20190917203718000000012/status/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:51:29,300 basehttp 124 "PATCH /meiduo_admin/orders/20190917203718000000012/status/ HTTP/1.1" 200 260
+INFO 2019-10-07 19:51:29,348 basehttp 124 "GET /meiduo_admin/orders/20190917203718000000012/ HTTP/1.1" 200 260
+INFO 2019-10-07 19:52:01,659 basehttp 124 "OPTIONS /meiduo_admin/skus/categories/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:01,661 basehttp 124 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:01,663 basehttp 124 "OPTIONS /meiduo_admin/skus/categories/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:01,665 basehttp 124 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:01,666 basehttp 124 "OPTIONS /meiduo_admin/skus/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:01,730 basehttp 124 "GET /meiduo_admin/skus/categories/ HTTP/1.1" 200 12997
+INFO 2019-10-07 19:52:01,730 basehttp 124 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 200 126
+INFO 2019-10-07 19:52:01,794 basehttp 124 "GET /meiduo_admin/skus/categories/ HTTP/1.1" 200 12997
+INFO 2019-10-07 19:52:01,797 basehttp 124 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 200 126
+INFO 2019-10-07 19:52:01,827 basehttp 124 "GET /meiduo_admin/skus/?page=1&pagesize=10&keyword= HTTP/1.1" 200 6674
+INFO 2019-10-07 19:52:02,225 basehttp 124 "OPTIONS /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:02,255 basehttp 124 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 200 10924
+INFO 2019-10-07 19:52:02,826 basehttp 124 "OPTIONS /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:02,877 basehttp 124 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 200 126
+INFO 2019-10-07 19:52:02,889 basehttp 124 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 538
+INFO 2019-10-07 19:52:02,943 basehttp 124 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 200 126
+INFO 2019-10-07 19:52:03,467 basehttp 124 "OPTIONS /meiduo_admin/goods/specs/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:03,469 basehttp 124 "OPTIONS /meiduo_admin/goods/specs/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:03,473 basehttp 124 "OPTIONS /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:03,506 basehttp 124 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 200 485
+INFO 2019-10-07 19:52:03,543 basehttp 124 "GET /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 200 951
+INFO 2019-10-07 19:52:03,552 basehttp 124 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 200 485
+INFO 2019-10-07 19:52:04,039 basehttp 124 "OPTIONS /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:04,042 basehttp 124 "OPTIONS /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:04,047 basehttp 124 "OPTIONS /meiduo_admin/goods/categories/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:04,051 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:04,063 basehttp 124 "OPTIONS /meiduo_admin/goods/categories/ HTTP/1.1" 200 0
+WARNING 2019-10-07 19:52:04,079 base 152 Not Found: /meiduo_admin/goods/channels/
+WARNING 2019-10-07 19:52:04,082 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 404 25
+WARNING 2019-10-07 19:52:04,084 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-10-07 19:52:04,084 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-10-07 19:52:04,085 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 25
+WARNING 2019-10-07 19:52:04,086 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 25
+WARNING 2019-10-07 19:52:04,101 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-10-07 19:52:04,101 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 25
+WARNING 2019-10-07 19:52:04,104 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-10-07 19:52:04,104 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 25
+INFO 2019-10-07 19:52:04,917 basehttp 124 "OPTIONS /meiduo_admin/goods/brands/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2019-10-07 19:52:04,924 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-10-07 19:52:04,926 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 25
+WARNING 2019-10-07 19:52:04,935 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-10-07 19:52:04,938 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 25
+WARNING 2019-10-07 19:52:04,941 base 152 Not Found: /meiduo_admin/goods/brands/
+WARNING 2019-10-07 19:52:04,941 basehttp 124 "GET /meiduo_admin/goods/brands/?page=1&pagesize=10 HTTP/1.1" 404 25
+INFO 2019-10-07 19:52:06,882 basehttp 124 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:06,885 basehttp 124 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:06,890 basehttp 124 "OPTIONS /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:06,915 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-10-07 19:52:06,922 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1149
+INFO 2019-10-07 19:52:06,935 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-10-07 19:52:10,508 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:52:13,319 basehttp 124 "GET /meiduo_admin/orders/?page=2&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:52:13,850 basehttp 124 "GET /meiduo_admin/orders/?page=3&pagesize=10&keyword= HTTP/1.1" 200 715
+INFO 2019-10-07 19:52:15,164 basehttp 124 "GET /meiduo_admin/orders/?page=4&pagesize=10&keyword= HTTP/1.1" 200 385
+INFO 2019-10-07 19:52:17,602 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:17,610 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 19:52:17,621 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+WARNING 2019-10-07 19:52:17,631 base 152 Not Found: /meiduo_admin/permission/content_types/
+WARNING 2019-10-07 19:52:17,632 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 404 14064
+WARNING 2019-10-07 19:52:17,637 base 152 Not Found: /meiduo_admin/permission/perms/
+WARNING 2019-10-07 19:52:17,645 base 152 Not Found: /meiduo_admin/permission/content_types/
+WARNING 2019-10-07 19:52:17,645 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 404 14064
+WARNING 2019-10-07 19:52:17,649 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 404 14079
+INFO 2019-10-07 19:57:08,134 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:57:08,137 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2019-10-07 19:57:08,150 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 19:57:08,150 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14043
+INFO 2019-10-07 19:57:08,151 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+WARNING 2019-10-07 19:57:08,166 base 152 Not Found: /meiduo_admin/permission/groups/
+WARNING 2019-10-07 19:57:08,167 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 19:57:08,168 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14043
+WARNING 2019-10-07 19:57:08,171 basehttp 124 "GET /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 404 14066
+WARNING 2019-10-07 19:57:09,297 base 152 Not Found: /meiduo_admin/permission/simple/
+INFO 2019-10-07 19:57:09,299 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 19:57:09,300 basehttp 124 "OPTIONS /meiduo_admin/permission/admins/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2019-10-07 19:57:09,304 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14043
+INFO 2019-10-07 19:57:09,301 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/simple/ HTTP/1.1" 200 0
+WARNING 2019-10-07 19:57:09,320 base 152 Not Found: /meiduo_admin/permission/groups/simple/
+WARNING 2019-10-07 19:57:09,321 base 152 Not Found: /meiduo_admin/permission/admins/
+WARNING 2019-10-07 19:57:09,327 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 19:57:09,327 basehttp 124 "GET /meiduo_admin/permission/groups/simple/ HTTP/1.1" 404 14064
+WARNING 2019-10-07 19:57:09,333 basehttp 124 "GET /meiduo_admin/permission/admins/?page=1&pagesize=10 HTTP/1.1" 404 14066
+WARNING 2019-10-07 19:57:09,335 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14043
+WARNING 2019-10-07 19:57:09,342 base 152 Not Found: /meiduo_admin/permission/groups/simple/
+WARNING 2019-10-07 19:57:09,342 basehttp 124 "GET /meiduo_admin/permission/groups/simple/ HTTP/1.1" 404 14064
+INFO 2019-10-07 20:10:07,126 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:07,129 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:07,130 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:07,193 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+ERROR 2019-10-07 20:10:07,212 exception 135 Internal Server Error: /meiduo_admin/permission/perms/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 757, in data
+    ret = super().data
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 511, in to_representation
+    for field in fields:
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1047, in get_fields
+    source, info, model, depth
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1192, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1309, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `content` is not valid for model `Permission`.
+INFO 2019-10-07 20:10:07,246 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+ERROR 2019-10-07 20:10:07,309 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 500 23196
+ERROR 2019-10-07 20:10:10,744 exception 135 Internal Server Error: /meiduo_admin/permission/perms/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 757, in data
+    ret = super().data
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 511, in to_representation
+    for field in fields:
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1047, in get_fields
+    source, info, model, depth
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1192, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1309, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `content` is not valid for model `Permission`.
+INFO 2019-10-07 20:10:10,760 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+ERROR 2019-10-07 20:10:10,872 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 500 23196
+INFO 2019-10-07 20:10:10,874 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:10:14,546 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:14,546 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:14,547 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+WARNING 2019-10-07 20:10:14,560 base 152 Not Found: /meiduo_admin/permission/groups/
+WARNING 2019-10-07 20:10:14,569 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 20:10:14,570 basehttp 124 "GET /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 404 14629
+WARNING 2019-10-07 20:10:14,571 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14606
+WARNING 2019-10-07 20:10:14,581 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 20:10:14,583 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14606
+INFO 2019-10-07 20:10:15,245 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+ERROR 2019-10-07 20:10:15,249 exception 135 Internal Server Error: /meiduo_admin/permission/perms/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 757, in data
+    ret = super().data
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 511, in to_representation
+    for field in fields:
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1047, in get_fields
+    source, info, model, depth
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1192, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1309, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `content` is not valid for model `Permission`.
+INFO 2019-10-07 20:10:15,276 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+ERROR 2019-10-07 20:10:15,308 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 500 23196
+INFO 2019-10-07 20:10:40,370 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:40,373 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:40,383 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:46,271 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:46,273 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:46,286 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:10:46,616 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:10:46,618 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+ERROR 2019-10-07 20:10:46,625 exception 135 Internal Server Error: /meiduo_admin/permission/perms/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 757, in data
+    ret = super().data
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 511, in to_representation
+    for field in fields:
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1047, in get_fields
+    source, info, model, depth
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1192, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1309, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `content` is not valid for model `Permission`.
+ERROR 2019-10-07 20:10:46,802 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 500 23253
+INFO 2019-10-07 20:13:46,258 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:13:46,267 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:13:46,281 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:13:46,459 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:13:46,477 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+ERROR 2019-10-07 20:13:46,483 exception 135 Internal Server Error: /meiduo_admin/permission/perms/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 757, in data
+    ret = super().data
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 511, in to_representation
+    for field in fields:
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1047, in get_fields
+    source, info, model, depth
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1192, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/python/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1309, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `content` is not valid for model `Permission`.
+ERROR 2019-10-07 20:13:46,744 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 500 23253
+INFO 2019-10-07 20:19:23,000 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:19:23,012 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:19:23,020 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:19:23,152 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:19:23,170 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 854
+INFO 2019-10-07 20:19:23,175 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:19:33,755 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=2&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:19:33,769 basehttp 124 "GET /meiduo_admin/permission/perms/?page=2&pagesize=10&ordering=id HTTP/1.1" 200 973
+INFO 2019-10-07 20:19:34,642 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=4&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:19:34,664 basehttp 124 "GET /meiduo_admin/permission/perms/?page=4&pagesize=10&ordering=id HTTP/1.1" 200 1006
+INFO 2019-10-07 20:19:35,993 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=6&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:19:36,018 basehttp 124 "GET /meiduo_admin/permission/perms/?page=6&pagesize=10&ordering=id HTTP/1.1" 200 998
+INFO 2019-10-07 20:19:37,237 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=7&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:19:37,260 basehttp 124 "GET /meiduo_admin/permission/perms/?page=7&pagesize=10&ordering=id HTTP/1.1" 200 926
+INFO 2019-10-07 20:19:38,196 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=8&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:19:38,218 basehttp 124 "GET /meiduo_admin/permission/perms/?page=8&pagesize=10&ordering=id HTTP/1.1" 200 462
+WARNING 2019-10-07 20:19:44,498 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 20:19:44,500 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14606
+WARNING 2019-10-07 20:19:44,518 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 20:19:44,518 base 152 Not Found: /meiduo_admin/permission/groups/
+WARNING 2019-10-07 20:19:44,520 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14606
+WARNING 2019-10-07 20:19:44,523 basehttp 124 "GET /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 404 14629
+INFO 2019-10-07 20:19:45,493 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:19:45,504 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 854
+INFO 2019-10-07 20:19:45,516 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:19:47,803 basehttp 124 "GET /meiduo_admin/permission/perms/?page=2&pagesize=10&ordering=id HTTP/1.1" 200 973
+INFO 2019-10-07 20:20:24,702 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:20:24,806 basehttp 124 "POST /meiduo_admin/permission/perms/ HTTP/1.1" 201 60
+INFO 2019-10-07 20:20:24,842 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 833
+INFO 2019-10-07 20:20:27,017 basehttp 124 "GET /meiduo_admin/permission/perms/?page=8&pagesize=10&ordering=id HTTP/1.1" 200 544
+INFO 2019-10-07 20:20:33,225 basehttp 124 "GET /meiduo_admin/permission/perms/?page=7&pagesize=10&ordering=id HTTP/1.1" 200 936
+INFO 2019-10-07 20:20:35,833 basehttp 124 "GET /meiduo_admin/permission/perms/?page=6&pagesize=10&ordering=id HTTP/1.1" 200 988
+INFO 2019-10-07 20:20:40,156 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 833
+INFO 2019-10-07 20:20:44,323 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/76/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:20:44,376 basehttp 124 "GET /meiduo_admin/permission/perms/76/ HTTP/1.1" 200 60
+INFO 2019-10-07 20:20:50,983 basehttp 124 "PUT /meiduo_admin/permission/perms/76/ HTTP/1.1" 200 64
+INFO 2019-10-07 20:20:51,008 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 837
+INFO 2019-10-07 20:22:09,650 basehttp 124 "DELETE /meiduo_admin/permission/perms/76/ HTTP/1.1" 204 0
+INFO 2019-10-07 20:22:09,671 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 854
+INFO 2019-10-07 20:22:11,820 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:22:11,825 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:22:11,835 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2019-10-07 20:22:11,848 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 20:22:11,851 base 152 Not Found: /meiduo_admin/permission/groups/
+WARNING 2019-10-07 20:22:11,854 basehttp 124 "GET /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 404 14629
+WARNING 2019-10-07 20:22:11,864 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 20:22:11,864 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14606
+WARNING 2019-10-07 20:22:11,866 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14606
+INFO 2019-10-07 20:22:18,395 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:22:18,406 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 854
+INFO 2019-10-07 20:22:18,414 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:22:20,335 basehttp 124 "GET /meiduo_admin/permission/perms/?page=2&pagesize=10&ordering=id HTTP/1.1" 200 973
+WARNING 2019-10-07 20:26:34,069 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 20:26:34,071 base 152 Not Found: /meiduo_admin/permission/groups/
+WARNING 2019-10-07 20:26:34,072 basehttp 124 "GET /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 404 14629
+WARNING 2019-10-07 20:26:34,078 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14606
+WARNING 2019-10-07 20:26:34,080 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 20:26:34,081 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14606
+INFO 2019-10-07 20:26:36,018 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:26:36,043 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 854
+INFO 2019-10-07 20:26:36,044 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+WARNING 2019-10-07 20:26:57,822 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 20:26:57,826 base 152 Not Found: /meiduo_admin/permission/groups/
+WARNING 2019-10-07 20:26:57,826 basehttp 124 "GET /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 404 14629
+WARNING 2019-10-07 20:26:57,826 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14606
+WARNING 2019-10-07 20:26:57,836 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-10-07 20:26:57,837 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 14606
+INFO 2019-10-07 20:43:12,726 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:43:12,730 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:43:12,733 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:43:12,765 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:43:12,783 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:43:12,786 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 854
+INFO 2019-10-07 20:43:13,605 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:43:13,606 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-10-07 20:43:13,607 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:43:13,643 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 200 6682
+INFO 2019-10-07 20:43:13,659 basehttp 124 "GET /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 200 55
+INFO 2019-10-07 20:43:13,666 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 200 6682
+INFO 2019-10-07 20:43:16,997 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 200 6682
+INFO 2019-10-07 20:43:17,005 basehttp 124 "GET /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 200 55
+INFO 2019-10-07 20:43:17,017 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 200 6682
+INFO 2019-10-07 20:43:39,193 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:43:39,389 basehttp 124 "POST /meiduo_admin/permission/groups/ HTTP/1.1" 201 41
+INFO 2019-10-07 20:43:39,424 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/?pagesize=10 HTTP/1.1" 200 0
+INFO 2019-10-07 20:43:39,458 basehttp 124 "GET /meiduo_admin/permission/groups/?pagesize=10 HTTP/1.1" 200 96
+INFO 2019-10-07 20:43:43,156 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/1/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:43:43,305 basehttp 124 "GET /meiduo_admin/permission/groups/1/ HTTP/1.1" 200 41
+INFO 2019-10-07 20:43:47,189 basehttp 124 "PUT /meiduo_admin/permission/groups/1/ HTTP/1.1" 200 41
+INFO 2019-10-07 20:43:47,213 basehttp 124 "GET /meiduo_admin/permission/groups/?pagesize=10 HTTP/1.1" 200 96
+INFO 2019-10-07 20:53:50,516 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:53:50,532 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:53:50,538 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:53:50,555 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 854
+INFO 2019-10-07 20:53:50,559 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:53:50,570 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 785
+INFO 2019-10-07 20:53:53,086 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=2&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:53:53,113 basehttp 124 "GET /meiduo_admin/permission/perms/?page=2&pagesize=10&ordering=id HTTP/1.1" 200 973
+INFO 2019-10-07 20:53:54,175 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=3&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:53:54,198 basehttp 124 "GET /meiduo_admin/permission/perms/?page=3&pagesize=10&ordering=id HTTP/1.1" 200 939
+INFO 2019-10-07 20:53:54,868 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=4&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:53:54,891 basehttp 124 "GET /meiduo_admin/permission/perms/?page=4&pagesize=10&ordering=id HTTP/1.1" 200 1006
+INFO 2019-10-07 20:53:56,204 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=5&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-10-07 20:53:56,215 basehttp 124 "GET /meiduo_admin/permission/perms/?page=5&pagesize=10&ordering=id HTTP/1.1" 200 963
+INFO 2019-10-07 20:53:57,770 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:53:57,774 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+INFO 2019-10-07 20:53:57,778 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-10-07 20:53:57,803 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 200 6682
+INFO 2019-10-07 20:53:57,810 basehttp 124 "GET /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 200 96
+INFO 2019-10-07 20:53:57,828 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 200 6682
