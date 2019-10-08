@@ -12,6 +12,8 @@ from meiduo_admin.views.image_view import *
 from meiduo_admin.views.order_view import *
 from meiduo_admin.views.perm_view import *
 from meiduo_admin.views.group_view import *
+from meiduo_admin.views.admin_view import *
+from meiduo_admin.views.channel_view import *
 
 urlpatterns = [
     # url(r'^authorizations/$',LoginAPIView.as_view()),
@@ -20,8 +22,8 @@ urlpatterns = [
     url(r'^users/$', UserAPIView.as_view()),
     url(r'^authorizations/$', obtain_jwt_token),
     # sku商品
-    url(r'^skus/$', SKUViewSet.as_view({'get': 'list', 'post':'create'})),
-    url(r'^skus/(?P<pk>\d+)/$', SKUViewSet.as_view({'get': 'retrieve', 'put':'update', 'delete':'destroy'})),
+    url(r'^skus/$', SKUViewSet.as_view({'get': 'list', 'post': 'create'})),
+    url(r'^skus/(?P<pk>\d+)/$', SKUViewSet.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
     url(r'^skus/categories/$', SKUViewSet.as_view({'get': 'categories'})),
     url(r'^goods/simple/$', SpuSimpleView.as_view()),
     url(r'^goods/(?P<pk>\d+)/specs/$', SPUSpecSimpleVIew.as_view()),
@@ -47,10 +49,10 @@ urlpatterns = [
     url(r'orders/(?P<pk>\d+)/status/$', OrderInfoView.as_view()),
 
     # 权限管理
-    url(r'permission/perms/$', PermViewSet.as_view({"get":"list", "post":'create'})),
-    url(r'permission/perms/(?P<pk>\d+)/$', PermViewSet.as_view({"get":"retrieve",
-                                                                "delete":"destroy",
-                                                         "put":"update"})),
+    url(r'permission/perms/$', PermViewSet.as_view({"get": "list", "post": 'create'})),
+    url(r'permission/perms/(?P<pk>\d+)/$', PermViewSet.as_view({"get": "retrieve",
+                                                                "delete": "destroy",
+                                                                "put": "update"})),
     # 新增权限可选类型
     url(r'permission/content_types/$', ContentTypeView.as_view()),
 
@@ -62,8 +64,17 @@ urlpatterns = [
     # 新增分组可选权限
     url(r'permission/simple/$', GroupPermView.as_view()),
 
-]
+    # 管理员权限
+    url(r'permission/admins/$', AdminView.as_view({'get': 'list', 'post': 'create'})),
+    url(r'permission/admins/(?P<pk>\d+)/$', AdminView.as_view({"get": "retrieve",
+                                                               "put": "update",
+                                                               "delete": "destroy"})),
+    # 新增管理员可选分组
+    url(r'permission/groups/simple/$', AdminGroupView.as_view()),
+    # 频道管理
+    url(r'goods/channels/$', GoodsChannelViewSet.as_view({'get': 'list'})),
 
+]
 
 router = SimpleRouter()
 router.register(prefix='statistical', viewset=HomeViewSet, base_name='home')
@@ -72,4 +83,3 @@ router.register(prefix='goods', viewset=SPUViewset, base_name='goods')
 router.register(prefix='specs/options', viewset=OptionViewSet, base_name='options')
 router.register(prefix='skus/images', viewset=ImageViewSet, base_name='images')
 urlpatterns += router.urls
-
