@@ -657,7 +657,7 @@ class GoodsJudgeView(LoginRequiredView):
         #     return http.HttpResponseForbidden('order_id不存在')
         # order = OrderInfo.objects.get(order_id=order_id)
         skus = []
-        order_qs= OrderGoods.objects.filter(order_id=order_id)
+        order_qs= OrderGoods.objects.filter(order_id=order_id, is_commented=False)
         for order in order_qs:
             sku = SKU.objects.get(id=order.sku_id)
             skus.append({
@@ -669,6 +669,73 @@ class GoodsJudgeView(LoginRequiredView):
                 'comment': str(order.comment),
                 'is_anonymous': str(order.is_anonymous),
                 'order_id': str(order.order_id),
+                'sku_id': sku.id
             })
 
         return render(request, 'goods_judge.html', {'uncomment_goods_list': skus})
+
+    def post(self, request):
+        # 接收数据
+        query_dict = request.body.decode()
+        data = json.loads(query_dict)
+        order_id = data.get('order_id')
+        sku_id = data.get('sku_id')
+        comment = data.get('comment')
+        score = data.get('score')
+        is_anonymous = data.get('is_anonymous')
+        # 校验数据
+
+        if not all([order_id, sku_id, comment, score]):
+            return http.HttpResponseForbidden('缺少必传参数')
+
+        try:
+            OrderGoods.objects.get(order_id=order_id, sku_id=sku_id)
+        except OrderGoods.DoesNotExist:
+            return http.HttpResponseForbidden('商品不存在')
+
+        # 评论需要大于五个数字
+        if len(comment) < 5:
+            return http.JsonResponse('请填写大于5个数字的评论')
+
+        OrderGoods.objects.filter(order_id=order_id,sku_id=sku_id).update(comment=comment,is_anonymous=is_anonymous, is_commented=True)
+
+        # 查看整个订单状态
+        comment_status = 0
+        order = OrderInfo.objects.get(order_id=order_id,status=OrderInfo.ORDER_STATUS_ENUM['UNCOMMENT'])
+        goods_list = OrderGoods.objects.filter(order_id=order_id)
+        for goods in goods_list:
+            if goods.is_commented:
+                comment_status += 1
+
+        # 如果所有订单商品均已评价，则将订单状态改为已完成
+        if comment_status == len(goods_list):
+            # order.update(status=OrderInfo.ORDER_STATUS_ENUM['FINISHED'])
+            order.status = OrderInfo.ORDER_STATUS_ENUM['FINISHED']
+            order.save()
+        return http.JsonResponse({'code': RETCODE.OK, 'errmsg': 'OK'})
+
+
+class SKUCommentView(View):
+
+    def get(self, request, sku_id):
+        # 校验
+        if not sku_id:
+            return http.HttpResponseForbidden('缺少必传参数')
+
+        comment_list = []
+        goods_list = OrderGoods.objects.filter(sku_id=sku_id, is_commented=True)
+        for goods in goods_list:
+            buyer = '匿名用户' if goods.is_anonymous else goods.order.user.username
+            comment_list.append({
+                'buyer': buyer,
+                'comment': goods.comment,
+                'score': goods.score
+            })
+
+        return http.JsonResponse({'code': RETCODE.OK, 'errmsg': 'OK', 'comment_list': comment_list})
+
+
+class ForgetPassword(View):
+
+    def get(self, request):
+        return render(request, 'find_password.html')

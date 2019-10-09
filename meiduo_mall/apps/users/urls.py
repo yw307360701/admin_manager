@@ -34,4 +34,9 @@ urlpatterns = [
     url(r'^orders/info/(?P<page_num>\d+)/$', views.CenterOrderView.as_view()),
     # 商品评价
     url(r'^orders/comment/$', views.GoodsJudgeView.as_view()),
+    # 显示商品评价
+    url(r'comments/(?P<sku_id>\d+)/$', views.SKUCommentView.as_view()),
+    # 忘记密码
+    url(r'^forget_password/$', views.ForgetPassword.as_view()),
+
 ]
