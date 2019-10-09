@@ -14,6 +14,7 @@ from meiduo_admin.views.perm_view import *
 from meiduo_admin.views.group_view import *
 from meiduo_admin.views.admin_view import *
 from meiduo_admin.views.channel_view import *
+from meiduo_admin.views.brands_view import *
 
 urlpatterns = [
     # url(r'^authorizations/$',LoginAPIView.as_view()),
@@ -72,7 +73,19 @@ urlpatterns = [
     # 新增管理员可选分组
     url(r'permission/groups/simple/$', AdminGroupView.as_view()),
     # 频道管理
-    url(r'goods/channels/$', GoodsChannelViewSet.as_view({'get': 'list'})),
+    url(r'goods/channels/$', GoodsChannelViewSet.as_view({'get': 'list', 'post': 'create'})),
+    url(r'goods/channels/(?P<pk>\d+)/$', GoodsChannelViewSet.as_view({'get': 'retrieve',
+                                                                      "put": "update",
+                                                                      "delete": "destroy"})),
+    # 可选频道分组
+    url(r'goods/channel_types/$', GoodsChannelViewSet.as_view({'get': 'channel_types'})),
+    # 可选一级分类
+    url(r'goods/categories/$', GoodsCategoryView.as_view()),
+    # 品牌
+    url(r'goods/brands/$', BrandVIewSet.as_view({'get': 'list', 'post': 'create'})),
+    url(r'goods/brands/(?P<pk>\d+)/$', BrandVIewSet.as_view({'get': 'retrieve',
+                                                             "put": "update",
+                                                             "delete": "destroy"})),
 
 ]
 
