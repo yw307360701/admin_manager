@@ -38,5 +38,12 @@ urlpatterns = [
     url(r'comments/(?P<sku_id>\d+)/$', views.SKUCommentView.as_view()),
     # 忘记密码
     url(r'^forget_password/$', views.ForgetPassword.as_view()),
-
+    # 找回密码
+    url(r'^accounts/(?P<username>[a-zA-Z0-9_-]{5,20})/sms/token/$', views.FoundPassword.as_view()),
+    # 找回密码发短信
+    url(r'^sms_codes/$', views.SendMessage.as_view()),
+    # 验证密码
+    url(r'^accounts/(?P<username>[a-zA-Z0-9_-]{5,20})/password/token/$', views.CheckMessage.as_view()),
+    # 修改密码
+    url(r'users/(?P<user_id>\d+)/password/$', views.ChangePassword.as_view())
 ]

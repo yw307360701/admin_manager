@@ -21,6 +21,12 @@ from .utils import generate_verify_email_url, check_verify_email_token
 import logging
 from cats.utils import merge_cart_cookie_to_redis
 from order.models import OrderInfo, OrderGoods
+from .utils import get_user_by_account
+from verifications import constants
+from oauth.utils import generate_openid_signature, check_openid
+from random import randint
+from celery_tasks.sms.tasks import send_sms_code
+
 
 logger = logging.getLogger('django')
 
@@ -739,3 +745,139 @@ class ForgetPassword(View):
 
     def get(self, request):
         return render(request, 'find_password.html')
+
+
+class FoundPassword(View):
+    def get(self, request, username):
+        query_dict = request.GET
+        # 获取验证码
+        text = query_dict.get('text')
+        # uuid
+        image_code_id = query_dict.get('image_code_id')
+        # 校验
+        if not all([text, image_code_id]):
+            return http.HttpResponseForbidden('缺少必传参数')
+
+        # 连接redis
+        redis_conn = get_redis_connection('verify_code')
+        image_code_server_bytes = redis_conn.get('img_%s' % image_code_id)
+
+        # 删除图形验证码
+        redis_conn.delete(image_code_id)
+
+        image_code_server = image_code_server_bytes.decode()
+        if text.lower() != image_code_server.lower():
+            return http.JsonResponse({'code': RETCODE.IMAGECODEERR, 'errmsg': '图形验证码填写错误'})
+
+        # 校验用户
+        user = get_user_by_account(username)
+        if not user:
+            return http.JsonResponse('用户不存在')
+        mobile = user.mobile
+        # generate_openid_signature, check_openid 进行加密
+        access_token = generate_openid_signature(mobile)
+
+        return http.JsonResponse({'code': RETCODE.OK, 'errmsg': 'OK', 'mobile': mobile, 'access_token': access_token})
+
+
+class SendMessage(View):
+    def get(self, request):
+        # 接收数据
+        query_dict = request.GET
+        access_token = query_dict.get('access_token')
+        # 获取服务器数据
+        # mobile: <class 'dict'>: {'openid': '17720500315'}
+        mobile = check_openid(access_token)
+        if not mobile:
+            return http.HttpResponseForbidden('access_tocken错误')
+
+        redis_conn = get_redis_connection('verify_code')
+        # 判断是否频繁发短信
+        flag_exist = redis_conn.get('flag%s' % mobile)
+        flag_ttl = redis_conn.ttl('flag%s' % mobile)
+        if flag_exist:
+            return http.JsonResponse({'code': RETCODE.THROTTLINGERR, 'errmsg': f'短信发送频繁, 请{flag_ttl}秒后再发'})
+        # 接受查询参数
+        # 创建管道
+        pl = redis_conn.pipeline()
+
+        # 存值判断，防止频繁发短信
+        pl.setex('flag%s' % mobile, constants.SMS_CODE_EXPIRE // 5, 1)
+
+        # 利用容联云发送短信
+        sms_code = '%06d' % randint(0, 999999)
+        logging.error(sms_code)
+        # 存储短信内容
+        pl.setex('sms_code%s' % mobile, constants.SMS_CODE_EXPIRE, sms_code)
+
+        # 执行管道
+        pl.execute()
+
+        # CCP().send_template_sms(mobile, [sms_code, constants.SMS_CODE_EXPIRE // 60], 1)
+        send_sms_code.delay(mobile, sms_code)
+
+        return http.JsonResponse({'code': RETCODE.OK, 'errmsg': '短信发送成功'})
+
+
+class CheckMessage(View):
+    def get(self, request, username):
+        # ?sms_code = ' + this.sms_code
+        query_dect = request.GET
+        sms_code = query_dect.get('sms_code')
+        # 检验
+        if not all([sms_code, username]):
+            return http.HttpResponseForbidden('缺少必传参数')
+
+        user = get_user_by_account(username)
+        if not user:
+            return http.JsonResponse('用户不存在')
+
+        redis_conn = get_redis_connection('verify_code')
+        sms_server = redis_conn.get('sms_code%s' % user.mobile)
+        print(sms_server)
+        if sms_server is None:
+            return http.JsonResponse({'code': RETCODE.SMSCODERR, 'errmsg': '短信验证码已过期'})
+        if sms_server.decode() != sms_code:
+            return http.JsonResponse({'code': RETCODE.SMSCODERR, 'errmsg': '短信验证码错误'})
+
+        user_id = user.id
+        access_token = generate_openid_signature(user_id)
+        # user_id, access_token
+        return http.JsonResponse({'code': RETCODE.OK, 'errmsg': 'OK', 'user_id': user_id, 'access_token': access_token})
+
+
+class ChangePassword(View):
+
+    def post(self, request, user_id):
+        # password: this.password,
+        # password2: this.password2,
+        # access_token: this.access_token
+        query_dict = request.body.decode()
+        data = json.loads(query_dict)
+        password = data.get('password')
+        password2 = data.get('password2')
+        access_token = data.get('access_token')
+        # 检验
+        if not all([password, password2, access_token]):
+            return http.HttpResponse('缺少必传参数')
+
+        if not re.match(r'^[0-9A-Za-z]{8,20}$', password):
+            return http.HttpResponseForbidden('请输入8-20位密码')
+
+        if password2 != password:
+            return http.HttpResponseForbidden('两次密码不一致')
+
+        user_id_2 = check_openid(access_token)
+        if user_id != str(user_id_2):
+            return http.HttpResponseForbidden('access_token错误')
+
+        # 修改密码
+        try:
+            user = User.objects.get(id=user_id)
+        except User.DoesNotExist:
+            return http.HttpResponseForbidden('该用户不存在')
+
+        user.set_password(password)
+        user.save()
+
+        return http.JsonResponse({'code': RETCODE.OK, 'errmsg': 'OK'})
